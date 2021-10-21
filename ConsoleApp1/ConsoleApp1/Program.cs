@@ -4,10 +4,21 @@ namespace ConsoleApp1
 {
     class Program
     {
+       
+
+
+
+
+
+
         static void Main(string[] args)
         {
-            int player1 = 0;
-            Console.WriteLine("player position : " + player1);
+            Class1 play = new Class1();
+            play.option();
+            Class1 playerr = new Class1();
+            double position=playerr.player();
+                        
+            Console.WriteLine("player position : "+ position );
         }
     }
 }
