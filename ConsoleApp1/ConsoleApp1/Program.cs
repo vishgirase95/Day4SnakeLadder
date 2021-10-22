@@ -19,6 +19,8 @@ namespace ConsoleApp1
             
        
             int position = 0;
+            int count = 0;
+
 
             while (position <= 100 )
              
@@ -27,11 +29,10 @@ namespace ConsoleApp1
                 Random opt = new Random();
                 int ChoseOption = opt.Next(1, 4);
                 int dice = opt.Next(1, 7);
-
                 if (ChoseOption == 1)
                 {
                     
-                    Console.WriteLine($"No Play dice is {dice} and position value is :{position}");
+                    Console.WriteLine($"No Play , position value is :{position}");
 
                     continue;
 
@@ -41,13 +42,13 @@ namespace ConsoleApp1
                     position = position + dice;
 
                     Console.WriteLine($"Ladder dice is {dice} and position value is :{position}");
-
+                    count++;
 
                 }
                 else
                 {
                     position = position - dice;
-
+                    count++;
                     Console.WriteLine($"Snake dice is {dice} and position value is :{position}");
                 }
                 if (position < 0)
@@ -55,6 +56,8 @@ namespace ConsoleApp1
                     position = 0;
                 }
             }
+
+            Console.WriteLine($"dice is played {count} times");
             if (position>=100)
             Console.WriteLine("Its win , Your Position is :  " + position);
             else
