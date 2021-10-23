@@ -12,6 +12,7 @@ namespace ConsoleApp1
            
             int position = 0;
             int winner =100;
+            int count = 0;
 
             while (position < 100 && winner==100 )
              
@@ -55,12 +56,13 @@ namespace ConsoleApp1
                         position = position - dice;
                     }
 
-
+                    count++;
                 }
                 else
                 {
                     position = position - dice;
 
+                    count++;
                     Console.WriteLine($"Snake dice is {dice} and position value is :{position}");
                 }
                 if (position < 0)
@@ -68,7 +70,7 @@ namespace ConsoleApp1
                     position = 0;
                 }
             }
-            Console.WriteLine($"The position is {position} ");
+            Console.WriteLine($"The winner  position is {position}  and the count of dice is {count}");
         }
 
     }
